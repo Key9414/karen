@@ -1,0 +1,106 @@
+/**
+ * @file
+ * Sistema de diseño Bayteq - Variables CSS
+ * Mantiene todas las variables de diseño para colores, tipografía, espaciado y radios
+ */
+
+:root {
+  --font-size: 14px;
+  
+  /* Typography variables */
+  --text-h1: 36px;
+  --text-h2: 24px;
+  --text-h3: 18px;
+  --text-h4: 16px;
+  --text-base: 14px;
+  --text-sm: 12px;
+  --font-weight-semibold: 600;
+  --font-weight-normal: 400;
+  --font-family-source: 'Source Sans Pro', sans-serif;
+  --font-family-oswald: 'Oswald', sans-serif;
+  
+  /* Color system */
+  --background: rgba(255, 255, 255, 1.00);
+  --foreground: rgba(2, 6, 23, 1.00);
+  --card: rgba(255, 255, 255, 1.00);
+  --card-foreground: rgba(7, 13, 16, 1.00);
+  --popover: rgba(255, 255, 255, 1.00);
+  --popover-foreground: rgba(7, 13, 16, 1.00);
+  --primary: rgba(35, 63, 80, 1.00);
+  --primary-foreground: rgba(248, 250, 252, 1.00);
+  --secondary: rgba(232, 232, 233, 1.00);
+  --secondary-foreground: rgba(15, 23, 42, 1.00);
+  --muted: rgba(241, 245, 249, 1.00);
+  --muted-foreground: rgba(142, 142, 147, 1.00);
+  --accent: rgba(232, 232, 233, 1.00);
+  --accent-foreground: rgba(15, 23, 42, 1.00);
+  
+  /* Bayteq brand red/coral color for CTAs and highlights */
+  --accent-red: rgba(209, 72, 54, 1.00);
+  --accent-red-foreground: rgba(255, 255, 255, 1.00);
+  
+  --destructive: rgba(220, 38, 38, 1.00);
+  --destructive-foreground: rgba(248, 250, 252, 1.00);
+  --border: rgba(226, 232, 240, 1.00);
+  --input: rgba(226, 232, 240, 1.00);
+  --input-background: rgba(255, 255, 255, 1.00);
+  --ring: rgba(100, 116, 139, 1.00);
+  
+  /* Shadows */
+  --elevation-sm: 0px 4px 6px 0px rgba(0, 0, 0, 0.1), 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  
+  /* Chart colors */
+  --chart-1: rgba(35, 63, 80, 1.00);
+  --chart-2: rgba(100, 116, 139, 1.00);
+  --chart-3: rgba(71, 85, 105, 1.00);
+  --chart-4: rgba(51, 65, 85, 1.00);
+  --chart-5: rgba(30, 41, 59, 1.00);
+  
+  /* Border radius */
+  --radius: 8px;
+  --radius-button: 16px;
+  --radius-card: 16px;
+  
+  /* Sidebar */
+  --sidebar: rgba(248, 250, 252, 1.00);
+  --sidebar-foreground: rgba(51, 65, 85, 1.00);
+  --sidebar-primary: rgba(15, 23, 42, 1.00);
+  --sidebar-primary-foreground: rgba(248, 250, 252, 1.00);
+  --sidebar-accent: rgba(241, 245, 249, 1.00);
+  --sidebar-accent-foreground: rgba(15, 23, 42, 1.00);
+  --sidebar-border: rgba(226, 232, 240, 1.00);
+  --sidebar-ring: rgba(148, 163, 184, 1.00);
+}
+
+/* Dark mode support */
+.dark,
+[data-theme="dark"] {
+  --background: rgba(7, 13, 16, 1.00);
+  --foreground: rgba(248, 250, 252, 1.00);
+  --card: rgba(15, 23, 42, 1.00);
+  --card-foreground: rgba(248, 250, 252, 1.00);
+  --popover: rgba(15, 23, 42, 1.00);
+  --popover-foreground: rgba(248, 250, 252, 1.00);
+  --primary: rgba(248, 250, 252, 1.00);
+  --primary-foreground: rgba(15, 23, 42, 1.00);
+  --secondary: rgba(51, 65, 85, 1.00);
+  --secondary-foreground: rgba(248, 250, 252, 1.00);
+  --muted: rgba(51, 65, 85, 1.00);
+  --muted-foreground: rgba(142, 142, 147, 1.00);
+  --accent: rgba(51, 65, 85, 1.00);
+  --accent-foreground: rgba(248, 250, 252, 1.00);
+  --destructive: rgba(220, 38, 38, 1.00);
+  --destructive-foreground: rgba(248, 250, 252, 1.00);
+  --border: rgba(51, 65, 85, 1.00);
+  --input: rgba(51, 65, 85, 1.00);
+  --input-background: rgba(30, 41, 59, 1.00);
+  --ring: rgba(100, 116, 139, 1.00);
+  --sidebar: rgba(15, 23, 42, 1.00);
+  --sidebar-foreground: rgba(248, 250, 252, 1.00);
+  --sidebar-primary: rgba(35, 63, 80, 1.00);
+  --sidebar-primary-foreground: rgba(248, 250, 252, 1.00);
+  --sidebar-accent: rgba(51, 65, 85, 1.00);
+  --sidebar-accent-foreground: rgba(248, 250, 252, 1.00);
+  --sidebar-border: rgba(51, 65, 85, 1.00);
+  --sidebar-ring: rgba(100, 116, 139, 1.00);
+}

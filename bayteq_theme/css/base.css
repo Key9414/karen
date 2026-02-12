@@ -1,0 +1,123 @@
+/**
+ * @file
+ * Estilos base del tema Bayteq
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-family-source);
+  font-size: var(--font-size);
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-family-source);
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-normal);
+}
+
+/* Typography base */
+h1 {
+  font-family: var(--font-family-source);
+  font-size: var(--text-h1);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  color: var(--foreground);
+}
+
+h2 {
+  font-family: var(--font-family-oswald);
+  font-size: var(--text-h2);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.5;
+  margin: 0 0 0.75rem 0;
+  color: var(--foreground);
+}
+
+h3 {
+  font-family: var(--font-family-oswald);
+  font-size: var(--text-h3);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.5;
+  margin: 0 0 0.5rem 0;
+  color: var(--foreground);
+}
+
+h4 {
+  font-family: var(--font-family-source);
+  font-size: var(--text-h4);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.5;
+  margin: 0 0 0.5rem 0;
+  color: var(--foreground);
+}
+
+p {
+  font-family: var(--font-family-source);
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+}
+
+label {
+  font-family: var(--font-family-source);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.5;
+}
+
+button {
+  font-family: var(--font-family-source);
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  font-family: var(--font-family-source);
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-red);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+}

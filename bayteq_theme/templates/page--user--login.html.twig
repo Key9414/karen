@@ -1,0 +1,48 @@
+{#
+/**
+ * @file
+ * Login page template.
+ */
+#}
+<div style="min-height: 100vh; background-color: var(--muted); display: flex; align-items: center; justify-content: center; padding: 1rem;">
+  <div style="width: 100%; max-width: 28rem;">
+    
+    {# Logo and Title #}
+    <div style="text-align: center; margin-bottom: 2rem;">
+      {% if site_logo %}
+        <div style="margin-bottom: 1.5rem;">
+          <img src="{{ site_logo }}" alt="Bayteq Logo" style="height: 3rem;">
+        </div>
+      {% endif %}
+      
+      <h1 style="font-family: var(--font-family-source); font-size: var(--text-h1); font-weight: var(--font-weight-semibold); color: var(--foreground); margin-bottom: 0.5rem; font-size: 2rem;">
+        Portal de Desarrolladores
+      </h1>
+      
+      <p style="font-family: var(--font-family-source); font-size: var(--text-base); color: var(--muted-foreground);">
+        Accede a APIs y recursos de Bayteq
+      </p>
+    </div>
+
+    {# Login Form Card #}
+    <div style="background-color: var(--card); border-radius: var(--radius-card); box-shadow: var(--elevation-sm); border: 1px solid var(--border); padding: 2rem;">
+      
+      {# Messages #}
+      {% if messages %}
+        {{ messages }}
+      {% endif %}
+
+      {# Form Content #}
+      {{ page.content }}
+
+    </div>
+
+    {# Footer Note #}
+    <p style="text-align: center; margin-top: 1.5rem; font-family: var(--font-family-source); font-size: var(--text-sm); color: var(--muted-foreground);">
+      Al continuar, aceptas nuestros 
+      <a href="/terms" style="color: var(--primary); text-decoration: none;">Términos</a> y 
+      <a href="/privacy" style="color: var(--primary); text-decoration: none;">Política de Privacidad</a>
+    </p>
+
+  </div>
+</div>

@@ -1,0 +1,213 @@
+/**
+ * @file
+ * Estilos de navegación del Portal Bayteq
+ */
+
+/* Top Navigation */
+.top-navigation {
+  background-color: var(--card);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--elevation-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.top-nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+.top-nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.top-nav-logo img {
+  height: 2rem;
+}
+
+.top-nav-title {
+  font-family: var(--font-family-oswald);
+  font-size: var(--text-h3);
+  font-weight: var(--font-weight-semibold);
+  color: var(--foreground);
+  margin: 0;
+}
+
+.top-nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top-nav-menu a {
+  font-family: var(--font-family-source);
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-normal);
+  color: var(--foreground);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.top-nav-menu a:hover,
+.top-nav-menu a.active {
+  color: var(--accent-red);
+}
+
+.top-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: var(--foreground);
+}
+
+@media (max-width: 768px) {
+  .top-nav-menu {
+    display: none;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    right: 0;
+    background-color: var(--card);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0;
+  }
+
+  .top-nav-menu.is-open {
+    display: flex;
+  }
+
+  .top-nav-menu li {
+    width: 100%;
+  }
+
+  .top-nav-menu a {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--text-sm);
+  color: var(--muted-foreground);
+}
+
+.breadcrumb a {
+  color: var(--muted-foreground);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary);
+}
+
+.breadcrumb-separator {
+  color: var(--border);
+}
+
+/* Tab Navigation */
+.tabs-navigation {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.tab-item {
+  padding: 1rem 1.5rem;
+  font-family: var(--font-family-source);
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-normal);
+  color: var(--muted-foreground);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.tab-item:hover {
+  color: var(--foreground);
+}
+
+.tab-item.active {
+  color: var(--accent-red);
+  border-bottom-color: var(--accent-red);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+}
+
+.pagination-item {
+  min-width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-source);
+  font-size: var(--text-sm);
+  color: var(--foreground);
+  background-color: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.pagination-item:hover {
+  background-color: var(--muted);
+}
+
+.pagination-item.active {
+  background-color: var(--accent-red);
+  color: white;
+  border-color: var(--accent-red);
+}
+
+.pagination-item:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

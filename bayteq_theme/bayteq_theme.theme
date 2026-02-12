@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Bayteq theme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function bayteq_theme_preprocess_page(&$variables) {
+  // Add site name and logo to all pages
+  $config = \Drupal::config('system.site');
+  $variables['site_name'] = $config->get('name');
+  $variables['site_logo'] = theme_get_setting('logo.url');
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for user_login_form.
+ */
+function bayteq_theme_form_user_login_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Add custom classes and placeholders
+  $form['name']['#attributes']['class'][] = 'form-control';
+  $form['name']['#attributes']['placeholder'] = t('tu@ejemplo.com');
+  $form['name']['#title'] = t('Correo electrónico');
+  
+  $form['pass']['#attributes']['class'][] = 'form-control';
+  $form['pass']['#attributes']['placeholder'] = t('••••••••');
+  $form['pass']['#title'] = t('Contraseña');
+  
+  // Customize submit button
+  $form['actions']['submit']['#value'] = t('Iniciar Sesión');
+  $form['actions']['submit']['#attributes']['class'][] = 'btn';
+  $form['actions']['submit']['#attributes']['class'][] = 'btn-primary';
+  $form['actions']['submit']['#attributes']['class'][] = 'btn-block';
+}

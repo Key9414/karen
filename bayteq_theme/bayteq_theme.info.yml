@@ -1,0 +1,23 @@
+name: 'Bayteq Developer Portal'
+type: theme
+description: 'Tema personalizado para el Portal de Desarrolladores de Bayteq'
+core_version_requirement: ^11
+package: Custom
+version: 1.0.0
+
+regions:
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  breadcrumb: 'Breadcrumb'
+  content: 'Content'
+  sidebar_first: 'Left sidebar'
+  footer: 'Footer'
+
+libraries:
+  - bayteq_theme/global-styling
+
+libraries-override:
+  system/base:
+    css:
+      component:
+        css/components/breadcrumb.css: false

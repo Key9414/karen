@@ -1,0 +1,89 @@
+{#
+/**
+ * @file
+ * Default page template.
+ */
+#}
+<div class="layout-container">
+  
+  {% if page.header %}
+    <header role="banner" style="background-color: var(--card); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 4rem;">
+        
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          {% if site_logo %}
+            <a href="{{ path('<front>') }}">
+              <img src="{{ site_logo }}" alt="{{ site_name }}" style="height: 2rem;">
+            </a>
+          {% endif %}
+          {% if site_name %}
+            <a href="{{ path('<front>') }}" style="font-family: var(--font-family-oswald); font-size: var(--text-h3); font-weight: var(--font-weight-semibold); color: var(--foreground); text-decoration: none;">
+              {{ site_name }}
+            </a>
+          {% endif %}
+        </div>
+
+        <nav style="display: flex; gap: 2rem;">
+          <a href="/home" style="font-family: var(--font-family-source); font-size: var(--text-base); color: var(--foreground); text-decoration: none;">Inicio</a>
+          <a href="/apis" style="font-family: var(--font-family-source); font-size: var(--text-base); color: var(--foreground); text-decoration: none;">APIs</a>
+          <a href="/docs" style="font-family: var(--font-family-source); font-size: var(--text-base); color: var(--foreground); text-decoration: none;">Docs</a>
+        </nav>
+
+        {{ page.header }}
+      </div>
+    </header>
+  {% endif %}
+
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>
+
+    {% if page.breadcrumb %}
+      {{ page.breadcrumb }}
+    {% endif %}
+
+    <div class="layout-content">
+      {{ page.content }}
+    </div>
+
+    {% if page.sidebar_first %}
+      <aside class="layout-sidebar-first" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+    {% endif %}
+  </main>
+
+  {% if page.footer %}
+    <footer role="contentinfo" style="background-color: var(--sidebar); border-top: 1px solid var(--border); margin-top: 4rem;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+          
+          <div>
+            <h3 style="font-family: var(--font-family-oswald); font-size: var(--text-h4); font-weight: var(--font-weight-semibold); color: var(--foreground); margin-bottom: 1rem;">Producto</h3>
+            <ul style="list-style: none; margin: 0; padding: 0;">
+              <li style="margin-bottom: 0.5rem;"><a href="/apis" style="font-family: var(--font-family-source); font-size: var(--text-base); color: var(--muted-foreground); text-decoration: none;">Catálogo de APIs</a></li>
+              <li style="margin-bottom: 0.5rem;"><a href="/docs" style="font-family: var(--font-family-source); font-size: var(--text-base); color: var(--muted-foreground); text-decoration: none;">Documentación</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 style="font-family: var(--font-family-oswald); font-size: var(--text-h4); font-weight: var(--font-weight-semibold); color: var(--foreground); margin-bottom: 1rem;">Recursos</h3>
+            <ul style="list-style: none; margin: 0; padding: 0;">
+              <li style="margin-bottom: 0.5rem;"><a href="/support" style="font-family: var(--font-family-source); font-size: var(--text-base); color: var(--muted-foreground); text-decoration: none;">Soporte</a></li>
+              <li style="margin-bottom: 0.5rem;"><a href="/blog" style="font-family: var(--font-family-source); font-size: var(--text-base); color: var(--muted-foreground); text-decoration: none;">Blog</a></li>
+            </ul>
+          </div>
+
+        </div>
+        
+        <div style="border-top: 1px solid var(--border); padding-top: 1.5rem; text-align: center;">
+          <p style="font-family: var(--font-family-source); font-size: var(--text-sm); color: var(--muted-foreground); margin: 0;">
+            © {{ "now"|date("Y") }} Bayteq. Todos los derechos reservados.
+          </p>
+        </div>
+
+        {{ page.footer }}
+      </div>
+    </footer>
+  {% endif %}
+
+</div>
